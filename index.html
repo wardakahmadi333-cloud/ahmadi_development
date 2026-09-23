@@ -4,22 +4,16 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description"
         content="Ahmadullah Ahmadi is a Full Stack Web Developer in Afghanistan specializing in modern, responsive websites and web applications using JavaScript, React, Node.js, Tailwind CSS, databases, and REST APIs.">
 
     <meta name="author" content="Ahmadullah Ahmadi">
-
     <meta name="robots" content="index, follow">
 
-    <title>
-        Ahmadullah Ahmadi | Web Developer | Full Stack Web Development
-    </title>
+    <title>Ahmadullah Ahmadi | Web Developer | Full Stack Web Development</title>
 
     <link rel="icon" href="./asset/image/logo.png" type="image/x-icon">
-
 
     <!-- Google Fonts -->
 
@@ -30,14 +24,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-
     <!-- Font Awesome -->
-
     <link rel="stylesheet" href="./css/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.css">
 
-
     <!-- Tailwind CSS -->
-
     <link rel="stylesheet" href="./css/output.css">
 
 </head>
@@ -86,12 +76,25 @@
 
         </nav>
 
+        <!-- <div class=" sm:block border-l border-slate-700 h-6">
+            <a><i class="hidden fa-solid fa-sun" style="color: rgb(1, 1, 1);"></i></a>
+            <a><i class="fa-solid fa-moon" style="color: rgb(255, 255, 255);"></i></a>
+        </div> -->
+
         <!-- Language -->
-        <select name="language" class="hidden sm:block bg-slate-800 border border-slate-600 rounded px-3 py-1 text-sm">
-            <option value="en">English</option>
-            <option value="ps">پښتو</option>
-            <option value="ps">دری</option>
-        </select>
+
+        <div class="relative">
+            <a><i
+                    class="fa-solid fa-globe absolute left-3 top-1/2 mx-2 -translate-y-1/2 text-white pointer-events-none"></i>
+            </a>
+            <select name="language" id="languageSelect"
+                class="bg-slate-800 border border-slate-600 rounded px-3 py-1 pl-9 text-sm text-white"
+                aria-label="Select language">
+                <option value="en">English</option>
+                <option value="ps">پښتو</option>
+                <option value="fa">دری</option>
+            </select>
+        </div>
 
         <!-- Mobile Menu -->
         <button type="button" class="sm:hidden text-xl hover:text-sky-400 transition" aria-label="Open menu">
@@ -121,7 +124,7 @@
                 Full Stack Web Developer
             </h1>
 
-            <p class="mt-6 text-slate-200 leading-8 text-justify max-w-2xl">
+            <p data-i18n="aboutText1" class="mt-6 text-slate-200 leading-8 text-justify max-w-2xl">
 
                 I'm a Full Stack Web Developer based in Kabul, Afghanistan.
                 I build modern, responsive, and user-friendly websites and
@@ -206,7 +209,7 @@
 
                     </p>
 
-                    <p class="text-slate-300 leading-8 text-justify mt-5">
+                    <p data-i18n="aboutText2" class="text-slate-300 leading-8 text-justify mt-5">
 
                         I work with technologies such as HTML, CSS,
                         JavaScript, React, Node.js, Tailwind CSS,
@@ -217,7 +220,7 @@
 
                     </p>
 
-                    <p class="text-slate-300 leading-8 text-justify mt-5">
+                    <p data-i18n="aboutText3" class="text-slate-300 leading-8 text-justify mt-5">
 
                         My goal is to create reliable web solutions that
                         solve real problems and provide value to users
@@ -1218,7 +1221,6 @@
                         0778266657
 
                     </a>
-
 
                     <a href="tel:0749060189" class="flex items-center hover:text-sky-400">
 
