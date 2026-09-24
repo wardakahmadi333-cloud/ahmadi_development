@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description"
         content="Ahmadullah Ahmadi is a Full Stack Web Developer in Afghanistan specializing in modern, responsive websites and web applications using JavaScript, React, Node.js, Tailwind CSS, databases, and REST APIs.">
 
     <meta name="author" content="Ahmadullah Ahmadi">
+
     <meta name="robots" content="index, follow">
 
-    <title>Ahmadullah Ahmadi | Web Developer | Full Stack Web Development</title>
+    <title>
+        Ahmadullah Ahmadi | Web Developer | Full Stack Web Development
+    </title>
 
     <link rel="icon" href="./asset/image/logo.png" type="image/x-icon">
+
 
     <!-- Google Fonts -->
 
@@ -24,26 +30,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+
     <!-- Font Awesome -->
+
     <link rel="stylesheet" href="./css/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.css">
 
+
     <!-- Tailwind CSS -->
+
     <link rel="stylesheet" href="./css/output.css">
 
 </head>
 
-<body class="font-[Poppins] bg-slate-50 text-slate-800">
+
+<body
+    class="font-[Poppins] bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-white transition-colors duration-300">
+
 
     <!-- ================= HEADER ================= -->
 
     <header
-        class="fixed top-0 left-0 w-full bg-slate-900 text-white flex justify-between items-center px-6 py-5 border-b border-slate-700 z-50">
+        class="fixed top-0 left-0 w-full bg-white text-slate-900 dark:bg-slate-900 dark:text-white flex justify-between items-center px-6 py-5 border-b border-slate-200 dark:border-slate-700 z-50 transition-colors duration-300">
+
+
+        <!-- Logo -->
 
         <h1 class="text-sky-400 font-bold text-xl">
             Ahmadi Development
         </h1>
 
+
         <!-- Desktop Navigation -->
+
         <nav class="hidden sm:flex items-center gap-6 font-semibold">
 
             <a href="#home" class="hover:text-sky-400 transition">
@@ -76,28 +94,79 @@
 
         </nav>
 
-        <!-- <div class=" sm:block border-l border-slate-700 h-6">
-            <a><i class="hidden fa-solid fa-sun" style="color: rgb(1, 1, 1);"></i></a>
-            <a><i class="fa-solid fa-moon" style="color: rgb(255, 255, 255);"></i></a>
-        </div> -->
+
+        <!-- Theme Toggle -->
+
+        <button type="button" id="themeToggle" class=" h-6 pl-3 flex items-center cursor-pointer"
+            aria-label="Toggle dark and light mode">
+
+            <!-- Sun -->
+
+            <i id="sunIcon" class="hidden fa-solid fa-sun text-white"></i>
+
+
+            <!-- Moon -->
+
+            <i id="moonIcon" class="fa-solid fa-moon text-slate-800 dark:text-white"></i>
+
+        </button>
+
 
         <!-- Language -->
 
-        <div class="relative">
-            <a><i
-                    class="fa-solid fa-globe absolute left-3 top-1/2 mx-2 -translate-y-1/2 text-white pointer-events-none"></i>
-            </a>
-            <select name="language" id="languageSelect"
-                class="bg-slate-800 border border-slate-600 rounded px-3 py-1 pl-9 text-sm text-white"
-                aria-label="Select language">
-                <option value="en">English</option>
-                <option value="ps">پښتو</option>
-                <option value="fa">دری</option>
+        <div id="lang_select" class="relative">
+
+            <i class="fa-solid fa-globe absolute left-1/2 top-1/2
+                -translate-x-1/2 -translate-y-1/2
+                text-slate-800 dark:text-white
+                pointer-events-none
+                sm:left-3 sm:translate-x-0"></i>
+
+
+            <select name="language" id="languageSelect" aria-label="Select language" class="
+                    h-8
+                    w-8
+                    appearance-none
+                    bg-transparent
+                    border-0
+                    text-transparent
+                    cursor-pointer
+
+                    sm:h-auto
+                    sm:w-auto
+                    sm:appearance-auto
+                    sm:bg-slate-800
+                    sm:border
+                    sm:border-slate-600
+                    sm:rounded
+                    sm:px-3
+                    sm:py-1
+                    sm:pl-9
+                    sm:text-white
+                    sm:text-sm
+                ">
+
+                <option class="bg-slate-800 text-white" value="en">
+                    English
+                </option>
+
+                <option class=" bg-slate-800 text-white" value="ps">
+                    پښتو
+                </option>
+
+                <option class="bg-slate-800 text-white" value="fa">
+                    دری
+                </option>
+
             </select>
+
         </div>
 
+
         <!-- Mobile Menu -->
-        <button type="button" class="sm:hidden text-xl hover:text-sky-400 transition" aria-label="Open menu">
+
+        <button type="button" class="sm:hidden text-xl text-slate-800 dark:text-white hover:text-sky-400 transition"
+            aria-label="Open menu">
 
             <i class="fa-solid fa-bars"></i>
 
@@ -106,11 +175,13 @@
     </header>
 
 
+
     <!-- ================= HERO ================= -->
 
     <section id="home"
         class="pt-32 min-h-screen flex flex-col md:flex-row justify-between items-center text-white bg-fixed bg-cover bg-center px-6 md:px-16"
         style="background-image: linear-gradient(rgba(15,23,42,0.88),rgba(15,23,42,0.75)), url('./asset/image/backround.png');">
+
 
         <!-- Hero Text -->
 
@@ -125,30 +196,27 @@
             </h1>
 
             <p data-i18n="aboutText1" class="mt-6 text-slate-200 leading-8 text-justify max-w-2xl">
-
                 I'm a Full Stack Web Developer based in Kabul, Afghanistan.
                 I build modern, responsive, and user-friendly websites and
                 web applications using modern web technologies.
 
                 My focus is on creating clean, functional, and practical
                 digital solutions that solve real problems.
-
             </p>
+
+
+            <!-- Hero Buttons -->
 
             <div class="flex flex-wrap gap-4 mt-8">
 
                 <a href="#projects"
                     class="bg-sky-400 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-sky-300 transition">
-
                     View My Work
-
                 </a>
 
                 <a href="#contact"
                     class="border border-sky-400 text-sky-400 px-6 py-3 rounded-lg font-semibold hover:bg-sky-400 hover:text-slate-900 transition">
-
                     Contact Me
-
                 </a>
 
             </div>
@@ -168,11 +236,14 @@
     </section>
 
 
+
     <!-- ================= ABOUT ================= -->
 
-    <section id="about" class="py-20 px-6 md:px-16 bg-slate-900 text-white">
+    <section id="about"
+        class="py-20 px-6 md:px-16 bg-white text-slate-800 dark:bg-slate-900 dark:text-white transition-colors duration-300">
 
         <div class="max-w-6xl mx-auto">
+
 
             <div class="text-center mb-12">
 
@@ -189,6 +260,7 @@
 
             <div class="grid md:grid-cols-5 gap-10">
 
+
                 <!-- About Text -->
 
                 <div class="md:col-span-3">
@@ -197,7 +269,8 @@
                         Hello! I'm Ahmadullah Ahmadi
                     </h3>
 
-                    <p class="text-slate-300 leading-8 text-justify">
+
+                    <p class="text-slate-600 dark:text-slate-300 leading-8 text-justify">
 
                         I'm a Full Stack Web Developer based in Kabul,
                         Afghanistan.
@@ -209,7 +282,8 @@
 
                     </p>
 
-                    <p data-i18n="aboutText2" class="text-slate-300 leading-8 text-justify mt-5">
+
+                    <p data-i18n="aboutText2" class="text-slate-600 dark:text-slate-300 leading-8 text-justify mt-5">
 
                         I work with technologies such as HTML, CSS,
                         JavaScript, React, Node.js, Tailwind CSS,
@@ -220,7 +294,8 @@
 
                     </p>
 
-                    <p data-i18n="aboutText3" class="text-slate-300 leading-8 text-justify mt-5">
+
+                    <p data-i18n="aboutText3" class="text-slate-600 dark:text-slate-300 leading-8 text-justify mt-5">
 
                         My goal is to create reliable web solutions that
                         solve real problems and provide value to users
@@ -233,8 +308,9 @@
 
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10">
 
+
                         <div
-                            class="bg-slate-800 border border-slate-700 p-5 rounded-xl text-center hover:border-sky-400 transition">
+                            class="bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 p-5 rounded-xl text-center hover:border-sky-400 transition">
 
                             <h3 class="text-2xl font-bold text-sky-400">
                                 3+
@@ -248,7 +324,7 @@
 
 
                         <div
-                            class="bg-slate-800 border border-slate-700 p-5 rounded-xl text-center hover:border-sky-400 transition">
+                            class="bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 p-5 rounded-xl text-center hover:border-sky-400 transition">
 
                             <h3 class="text-2xl font-bold text-sky-400">
                                 1
@@ -262,7 +338,7 @@
 
 
                         <div
-                            class="bg-slate-800 border border-slate-700 p-5 rounded-xl text-center hover:border-sky-400 transition">
+                            class="bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 p-5 rounded-xl text-center hover:border-sky-400 transition">
 
                             <h3 class="text-2xl font-bold text-sky-400">
                                 10+
@@ -279,6 +355,7 @@
                 </div>
 
 
+
                 <!-- Expertise -->
 
                 <div class="md:col-span-2">
@@ -290,8 +367,9 @@
 
                     <div class="grid grid-cols-2 gap-4">
 
+
                         <div
-                            class="bg-slate-800 p-4 rounded-lg flex items-center border border-slate-700 hover:border-sky-400 transition">
+                            class="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg flex items-center border border-slate-300 dark:border-slate-700 hover:border-sky-400 transition">
 
                             <img src="./asset/image/desktop-removebg-preview.png" alt="Frontend Development"
                                 class="w-9 h-9 p-1 bg-sky-400 rounded-full">
@@ -304,7 +382,7 @@
 
 
                         <div
-                            class="bg-slate-800 p-4 rounded-lg flex items-center border border-slate-700 hover:border-sky-400 transition">
+                            class="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg flex items-center border border-slate-300 dark:border-slate-700 hover:border-sky-400 transition">
 
                             <img src="./asset/image/backend.png" alt="Backend Development"
                                 class="w-9 h-9 p-1 bg-sky-400 rounded-full">
@@ -317,7 +395,7 @@
 
 
                         <div
-                            class="bg-slate-800 p-4 rounded-lg flex items-center border border-slate-700 hover:border-sky-400 transition">
+                            class="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg flex items-center border border-slate-300 dark:border-slate-700 hover:border-sky-400 transition">
 
                             <img src="./asset/image/database-removebg-preview.png" alt="Database Development"
                                 class="w-9 h-9 p-1 bg-sky-400 rounded-full">
@@ -330,7 +408,7 @@
 
 
                         <div
-                            class="bg-slate-800 p-4 rounded-lg flex items-center border border-slate-700 hover:border-sky-400 transition">
+                            class="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg flex items-center border border-slate-300 dark:border-slate-700 hover:border-sky-400 transition">
 
                             <img src="./asset/image/api.png" alt="API Development"
                                 class="w-9 h-9 p-1 bg-sky-400 rounded-full">
@@ -344,11 +422,13 @@
                     </div>
 
 
+
                     <!-- Social -->
 
                     <h3 class="font-bold text-xl mt-10 mb-5">
                         Connect With Me
                     </h3>
+
 
                     <div class="flex gap-5 text-xl">
 
@@ -384,6 +464,7 @@
                     </div>
 
 
+
                     <!-- Buttons -->
 
                     <div class="flex flex-wrap gap-4 mt-8">
@@ -392,14 +473,17 @@
                             class="bg-sky-400 text-slate-900 px-5 py-3 rounded-lg font-semibold hover:bg-sky-300 transition">
 
                             <i class="fa-solid fa-arrow-right mr-2"></i>
+
                             View My Work
 
                         </a>
 
-                        <a href="./asset/document/د ثانوي زده کړو تصديق پاڼه.pdf" download
-                            class="bg-slate-700 px-5 py-3 rounded-lg font-semibold hover:bg-slate-600 transition">
+
+                        <a href="./asset/document//CV.pdf" download
+                            class="bg-slate-700 text-white px-5 py-3 rounded-lg font-semibold hover:bg-slate-600 transition">
 
                             <i class="fa-solid fa-download mr-2"></i>
+
                             Download CV
 
                         </a>
@@ -415,11 +499,14 @@
     </section>
 
 
+
     <!-- ================= SKILLS ================= -->
 
-    <section id="skills" class="py-20 px-6">
+    <section id="skills"
+        class="py-20 px-6 bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-white transition-colors duration-300">
 
         <div class="max-w-6xl mx-auto">
+
 
             <div class="text-center mb-10">
 
@@ -440,7 +527,7 @@
                 <!-- HTML -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
                     <img class="h-12" src="./asset/image/html.png" alt="HTML">
 
@@ -454,7 +541,7 @@
                 <!-- CSS -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
                     <img class="h-12" src="./asset/image/css.png" alt="CSS">
 
@@ -468,7 +555,7 @@
                 <!-- JavaScript -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
                     <img class="h-12" src="./asset/image/JS.png" alt="JavaScript">
 
@@ -482,7 +569,7 @@
                 <!-- React -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
                     <img class="h-12" src="./asset/image/react.png" alt="React">
 
@@ -496,7 +583,7 @@
                 <!-- Node.js -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
                     <img class="h-12" src="./asset/image/node js.png" alt="Node.js">
 
@@ -510,7 +597,7 @@
                 <!-- Bootstrap -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
                     <img class="h-12" src="./asset/image/bootstrap.png" alt="Bootstrap">
 
@@ -524,7 +611,7 @@
                 <!-- Tailwind -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
                     <img class="h-12" src="./asset/image/tailwind.png" alt="Tailwind CSS">
 
@@ -538,7 +625,7 @@
                 <!-- MongoDB -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
                     <img class="h-12" src="./asset/image/mongo DB.png" alt="MongoDB">
 
@@ -552,7 +639,7 @@
                 <!-- MySQL -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
                     <img class="h-12" src="./asset/image/mysql.png" alt="MySQL">
 
@@ -566,7 +653,7 @@
                 <!-- Git -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
                     <img class="h-12" src="./asset/image/git.png" alt="Git">
 
@@ -580,9 +667,9 @@
                 <!-- GitHub -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
-                    <img class="h-12" src="./asset/image/github.png" alt="GitHub">
+                    <img id="gitHubIcon" class="h-12" src="./asset/image/github-light.png" alt="GitHub">
 
                     <h3 class="font-bold text-xl mt-2">
                         GitHub
@@ -594,7 +681,7 @@
                 <!-- SEO -->
 
                 <div
-                    class="w-40 h-32 flex flex-col items-center justify-center border border-gray-300 shadow-md hover:shadow-xl hover:scale-105 p-4 rounded-xl transition">
+                    class="w-40 h-32 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 shadow-md hover:shadow-xl hover:scale-105 hover:border-sky-400 hover:-translate-y-2 p-4 rounded-xl transition">
 
                     <img class="h-12" src="./asset/image/seo.png" alt="SEO">
 
@@ -611,11 +698,14 @@
     </section>
 
 
+
     <!-- ================= SERVICES ================= -->
 
-    <section id="services" class="py-20 bg-slate-900 text-white">
+    <section id="services"
+        class="py-20 bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-white transition-colors duration-300">
 
         <div class="max-w-6xl mx-auto px-6">
+
 
             <div class="text-center mb-14">
 
@@ -636,7 +726,7 @@
                 <!-- Service 1 -->
 
                 <div
-                    class="bg-slate-800 border border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
+                    class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
 
                     <i class="fa-solid fa-code text-3xl text-sky-400"></i>
 
@@ -644,7 +734,7 @@
                         Web Development
                     </h3>
 
-                    <p class="text-slate-300 leading-7 mt-4">
+                    <p class="text-slate-600 dark:text-slate-300 leading-7 mt-4">
                         Building responsive and modern websites
                         using current web technologies.
                     </p>
@@ -655,7 +745,7 @@
                 <!-- Service 2 -->
 
                 <div
-                    class="bg-slate-800 border border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
+                    class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
 
                     <i class="fa-solid fa-layer-group text-3xl text-sky-400"></i>
 
@@ -663,7 +753,7 @@
                         Frontend Development
                     </h3>
 
-                    <p class="text-slate-300 leading-7 mt-4">
+                    <p class="text-slate-600 dark:text-slate-300 leading-7 mt-4">
                         Creating responsive and user-friendly
                         interfaces with modern frontend technologies.
                     </p>
@@ -674,7 +764,7 @@
                 <!-- Service 3 -->
 
                 <div
-                    class="bg-slate-800 border border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
+                    class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
 
                     <i class="fa-solid fa-server text-3xl text-sky-400"></i>
 
@@ -682,7 +772,7 @@
                         Backend Development
                     </h3>
 
-                    <p class="text-slate-300 leading-7 mt-4">
+                    <p class="text-slate-600 dark:text-slate-300 leading-7 mt-4">
                         Developing server-side applications,
                         APIs, and backend functionality.
                     </p>
@@ -693,7 +783,7 @@
                 <!-- Service 4 -->
 
                 <div
-                    class="bg-slate-800 border border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
+                    class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
 
                     <i class="fa-solid fa-database text-3xl text-sky-400"></i>
 
@@ -701,7 +791,7 @@
                         Database Development
                     </h3>
 
-                    <p class="text-slate-300 leading-7 mt-4">
+                    <p class="text-slate-600 dark:text-slate-300 leading-7 mt-4">
                         Designing and working with databases
                         for web applications.
                     </p>
@@ -712,7 +802,7 @@
                 <!-- Service 5 -->
 
                 <div
-                    class="bg-slate-800 border border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
+                    class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
 
                     <i class="fa-solid fa-plug text-3xl text-sky-400"></i>
 
@@ -720,7 +810,7 @@
                         API Development
                     </h3>
 
-                    <p class="text-slate-300 leading-7 mt-4">
+                    <p class="text-slate-600 dark:text-slate-300 leading-7 mt-4">
                         Creating and integrating REST APIs
                         for web applications.
                     </p>
@@ -731,7 +821,7 @@
                 <!-- Service 6 -->
 
                 <div
-                    class="bg-slate-800 border border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
+                    class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 p-7 rounded-2xl hover:border-sky-400 hover:-translate-y-2 transition">
 
                     <i class="fa-solid fa-mobile-screen text-3xl text-sky-400"></i>
 
@@ -739,7 +829,7 @@
                         Responsive Design
                     </h3>
 
-                    <p class="text-slate-300 leading-7 mt-4">
+                    <p class="text-slate-600 dark:text-slate-300 leading-7 mt-4">
                         Building websites that work properly
                         across desktop, tablet, and mobile devices.
                     </p>
@@ -753,11 +843,14 @@
     </section>
 
 
+
     <!-- ================= EXPERIENCE ================= -->
 
-    <section id="experience" class="py-20 bg-slate-950 text-white">
+    <section id="experience"
+        class="py-20 bg-slate-200 text-slate-800 dark:bg-slate-950 dark:text-white transition-colors duration-300">
 
         <div class="max-w-6xl mx-auto px-6">
+
 
             <div class="text-center mb-14">
 
@@ -775,73 +868,8 @@
             <div class="space-y-8">
 
 
-                <!-- Experience 1 -->
-
-                <!-- <div class="bg-slate-900 border border-slate-700 rounded-2xl p-7 hover:border-sky-400 transition">
-
-                    <div class="flex flex-col md:flex-row md:justify-between gap-3">
-
-                        <div>
-
-                            <span
-                                class="inline-block bg-sky-400 text-slate-900 text-sm px-3 py-1 rounded-full font-semibold">
-                                2025
-                            </span>
-
-                            <h3 class="text-2xl font-bold mt-4">
-                                Internship – Afghan Cosmos Group
-                            </h3>
-
-                        </div>
-
-                        <i class="fa-solid fa-briefcase text-sky-400 text-3xl"></i>
-
-                    </div>
-
-                    <p class="text-slate-300 leading-8 mt-5">
-                        Worked as a Full Stack Web Developer intern
-                        and gained practical experience by working
-                        on real projects with a professional team.
-                    </p>
-
-                </div> -->
-
-
-                <!-- Experience 2 -->
-
-                <!-- <div class="bg-slate-900 border border-slate-700 rounded-2xl p-7 hover:border-sky-400 transition">
-
-                    <div class="flex flex-col md:flex-row md:justify-between gap-3">
-
-                        <div>
-
-                            <span
-                                class="inline-block bg-sky-400 text-slate-900 text-sm px-3 py-1 rounded-full font-semibold">
-                                2025
-                            </span>
-
-                            <h3 class="text-2xl font-bold mt-4">
-                                Full Stack Developer – Yaqeen Technology
-                            </h3>
-
-                        </div>
-
-                        <i class="fa-solid fa-laptop-code text-sky-400 text-3xl"></i>
-
-                    </div>
-
-                    <p class="text-slate-300 leading-8 mt-5">
-                        Worked on frontend and backend projects
-                        and developed practical experience with
-                        modern web technologies.
-                    </p>
-
-                </div> -->
-
-
-                <!-- Experience 3 -->
-
-                <div class="bg-slate-900 border border-slate-700 rounded-2xl p-7 hover:border-sky-400 transition">
+                <div
+                    class="bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-2xl p-7 hover:border-sky-400 transition">
 
                     <div class="flex flex-col md:flex-row md:justify-between gap-3">
 
@@ -862,7 +890,8 @@
 
                     </div>
 
-                    <p class="text-slate-300 leading-8 mt-5">
+
+                    <p class="text-slate-600 dark:text-slate-300 leading-8 mt-5">
                         Building web applications and personal
                         projects while improving my skills in
                         frontend, backend, databases, and modern
@@ -878,11 +907,14 @@
     </section>
 
 
+
     <!-- ================= PROJECTS ================= -->
 
-    <section id="projects" class="py-20 px-6">
+    <section id="projects"
+        class="py-20 px-6 bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-white transition-colors duration-300">
 
         <div class="max-w-6xl mx-auto">
+
 
             <div class="text-center mb-12">
 
@@ -903,7 +935,7 @@
                 <!-- Project 1 -->
 
                 <article
-                    class="border border-gray-300 rounded-2xl overflow-hidden shadow-lg hover:shadow-sky-400 hover:-translate-y-2 transition">
+                    class="bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-2xl overflow-hidden shadow-lg hover:shadow-sky-400 hover:-translate-y-2 transition">
 
                     <img src="./asset/image/Lecwal_work.png" alt="Lecwal Online Platform"
                         class="w-full h-56 object-center">
@@ -914,11 +946,12 @@
                             Lecwal Online Platform
                         </h3>
 
-                        <p class="mt-4 text-slate-600 leading-7">
+                        <p class="mt-4 text-slate-600 dark:text-slate-300 leading-7">
                             A web platform focused on providing
                             useful digital tools and services for
                             Pashto-speaking users.
                         </p>
+
 
                         <div class="flex flex-wrap gap-2 mt-5">
 
@@ -952,7 +985,9 @@
 
                         </div>
 
-                        <a href="#" class="inline-block mt-6 text-sky-500 font-semibold hover:text-sky-700">
+
+                        <a href="#"
+                            class="inline-block mt-6 text-sky-500 dark:text-sky-400 font-semibold hover:text-sky-700">
                             View Project →
                         </a>
 
@@ -961,10 +996,11 @@
                 </article>
 
 
+
                 <!-- Project 2 -->
 
                 <article
-                    class="border border-gray-300 rounded-2xl overflow-hidden shadow-lg hover:shadow-sky-400 hover:-translate-y-2 transition">
+                    class="bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-2xl overflow-hidden shadow-lg hover:shadow-sky-400 hover:-translate-y-2 transition">
 
                     <img src="./asset/image/hospital.png" alt="Hospital Management System"
                         class="w-full h-56 object-cover">
@@ -975,11 +1011,12 @@
                             Hospital Management System
                         </h3>
 
-                        <p class="mt-4 text-slate-600 leading-7">
+                        <p class="mt-4 text-slate-600 dark:text-slate-300 leading-7">
                             A web application concept for managing
                             hospital information, patients, staff,
                             and administrative workflows.
                         </p>
+
 
                         <div class="flex flex-wrap gap-2 mt-5">
 
@@ -1001,7 +1038,9 @@
 
                         </div>
 
-                        <a href="#" class="inline-block mt-6 text-sky-500 font-semibold hover:text-sky-700">
+
+                        <a href="#"
+                            class="inline-block mt-6 text-sky-500 dark:text-sky-400 font-semibold hover:text-sky-700">
                             View Project →
                         </a>
 
@@ -1010,10 +1049,11 @@
                 </article>
 
 
+
                 <!-- Project 3 -->
 
                 <article
-                    class="border border-gray-300 rounded-2xl overflow-hidden shadow-lg hover:shadow-sky-400 hover:-translate-y-2 transition">
+                    class="bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-2xl overflow-hidden shadow-lg hover:shadow-sky-400 hover:-translate-y-2 transition">
 
                     <img src="./asset/image/hospital.png" alt="Employee Payment System"
                         class="w-full h-56 object-cover">
@@ -1024,11 +1064,12 @@
                             Employee Payment System
                         </h3>
 
-                        <p class="mt-4 text-slate-600 leading-7">
+                        <p class="mt-4 text-slate-600 dark:text-slate-300 leading-7">
                             A web application concept for managing
                             employee payment records and related
                             information.
                         </p>
+
 
                         <div class="flex flex-wrap gap-2 mt-5">
 
@@ -1050,7 +1091,9 @@
 
                         </div>
 
-                        <a href="#" class="inline-block mt-6 text-sky-500 font-semibold hover:text-sky-700">
+
+                        <a href="#"
+                            class="inline-block mt-6 text-sky-500 dark:text-sky-400 font-semibold hover:text-sky-700">
                             View Project →
                         </a>
 
@@ -1065,9 +1108,11 @@
     </section>
 
 
+
     <!-- ================= CONTACT ================= -->
 
-    <section id="contact" class="py-20 bg-slate-900 text-white px-6">
+    <section id="contact"
+        class="py-20 bg-white text-slate-800 dark:bg-slate-900 dark:text-white px-6 transition-colors duration-300">
 
         <div class="max-w-4xl mx-auto text-center">
 
@@ -1079,10 +1124,11 @@
                 Let's Work Together
             </h2>
 
-            <p class="text-slate-300 leading-8 mt-5">
+            <p class="text-slate-600 dark:text-slate-300 leading-8 mt-5">
                 Have a project idea or need a web solution?
                 Feel free to contact me.
             </p>
+
 
             <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
 
@@ -1090,14 +1136,17 @@
                     class="bg-sky-400 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-sky-300 transition">
 
                     <i class="fa-solid fa-envelope mr-2"></i>
+
                     Email Me
 
                 </a>
+
 
                 <a href="tel:0778266657"
                     class="border border-sky-400 text-sky-400 px-6 py-3 rounded-lg font-semibold hover:bg-sky-400 hover:text-slate-900 transition">
 
                     <i class="fa-solid fa-phone mr-2"></i>
+
                     Call Me
 
                 </a>
@@ -1109,9 +1158,11 @@
     </section>
 
 
+
     <!-- ================= FOOTER ================= -->
 
-    <footer class="bg-slate-950 text-white py-12 px-6">
+    <footer
+        class="bg-slate-100 text-slate-800 dark:bg-slate-950 dark:text-white py-12 px-6 transition-colors duration-300">
 
         <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
 
@@ -1124,7 +1175,7 @@
                     Ahmadullah Ahmadi
                 </h2>
 
-                <p class="text-slate-300 leading-7 mt-4 max-w-xl">
+                <p class="text-slate-600 dark:text-slate-300 leading-7 mt-4 max-w-xl">
                     I'm a Full Stack Web Developer based in Kabul,
                     Afghanistan. I build modern, responsive, and
                     practical websites and web applications.
@@ -1164,7 +1215,7 @@
                     Quick Links
                 </h3>
 
-                <div class="flex flex-col gap-3 mt-4 text-slate-300">
+                <div class="flex flex-col gap-3 mt-4 text-slate-600 dark:text-slate-300">
 
                     <a href="#home" class="hover:text-sky-400">
                         Home
@@ -1203,9 +1254,11 @@
                     Contact Me
                 </h3>
 
-                <div class="flex flex-col gap-4 mt-4 text-slate-300">
 
-                    <a href=":wardak.ahmadi333@gmail.com" class="flex items-center hover:text-sky-400">
+                <div class="flex flex-col gap-4 mt-4 text-slate-600 dark:text-slate-300">
+
+
+                    <a href="mailto:wardak.ahmadi333@gmail.com" class="flex items-center hover:text-sky-400">
 
                         <i class="fa-regular fa-envelope mr-3"></i>
 
@@ -1221,6 +1274,7 @@
                         0778266657
 
                     </a>
+
 
                     <a href="tel:0749060189" class="flex items-center hover:text-sky-400">
 
@@ -1239,7 +1293,7 @@
 
         <!-- Copyright -->
 
-        <div class="border-t border-slate-800 mt-10 pt-6 text-center text-slate-500">
+        <div class="border-t border-slate-300 dark:border-slate-800 mt-10 pt-6 text-center text-slate-500">
 
             <p>
                 © 2026 Ahmadullah Ahmadi. All rights reserved.
@@ -1249,7 +1303,12 @@
 
     </footer>
 
+
+
+    <!-- JavaScript -->
+
     <script src="./js/app.js"></script>
+
 </body>
 
 </html>
